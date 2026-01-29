@@ -3,27 +3,30 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Shapez CE modding docs",
-  description: "A VitePress Site",
+  description: "Docs for mod developers in Shapez CE",
+  cleanUrls: true,
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Guides', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
     sidebar: [
       {
-        text: 'Examples',
+        text: "Overview",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: "Introduction", link: "/overview/introduction" },
+        ]
+      },
+      {
+        text: "Getting started",
+        link: "/getting-started/",
+        items: [
+          {text: "Setting up dev environment", link: "/getting-started/setup-dev-env"}
         ]
       }
     ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+    nav: [
+      { text: 'Guide', link: '/guide/introduction' },
+      // { text: 'Reference', link: '/config' },
     ]
   },
-  base: "/shapez-ce-mod-docs/"
+  base: "/shapez-ce-mod-docs/",
 })
